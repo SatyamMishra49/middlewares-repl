@@ -12,8 +12,8 @@ function usermiddleware(req, res, next) {
 app.get("/odd", usermiddleware, function (req, res) {
   res.send("You are all set to go....");
 });
-app.use(err, req, res, next){
-  res.json({msg:"Error"});
-}
+app.use((err, req, res, next) => {
+  res.json({ msg: "Error" });
+});
 
 app.listen(3001);
